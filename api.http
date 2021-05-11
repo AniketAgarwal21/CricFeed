@@ -1,0 +1,10 @@
+POST http://localhost:3000/add-post
+Content-Type: application/json
+
+{
+    "title": "bruhruhuhruhr 2021 Match 30: RCB vs KKR Dream11 Prediction Possible Playing 11 Pitch Report",
+    "body": "bruhuhuhhuhuh Challengers were not at their supreme in the previous match against Kings. Super V has also not reigned supreme in the competition so far. Except for that innings against Royals, Virat Kohli is getting those 30s, 40s here and there, but for some reason, the Southpaw is not able to take it to next level, like he often does. We can only hope that special innings come on a special day, and RCB Fans will go a little further and hope that the special day turns out to be the IPL Final on the 30th of this month.",
+    "author": "admin",
+    "image": "https://i1.wp.com/cricblog.net/wp-content/uploads/2020/11/AB-de-Villiers-e1618356342395.jpg"
+
+}

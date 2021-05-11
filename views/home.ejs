@@ -1,0 +1,182 @@
+<%- include('partials/header') %>
+
+    <!----------------------------- Main Site Section ------------------------------>
+    <main>
+        <!------------------------ Site Title ---------------------->
+
+        <section class="site-title">
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                <h3>Welcome to CricFeed</h3>
+                <h1>All 'Bout Cricket</h1>
+                <button class="btn">Explore</button>
+            </div>
+        </section>
+
+        <!------------x----------- Site Title ----------x----------->
+
+        <!-- --------------------- Blog Carousel ----------------- -->
+
+        <!-- <% popularPosts.forEach(post=> { %>
+            <div class="blog-content" data-aos="fade-up" data-aos-delay="200">
+                <img src="<%= post.image %>" alt="post-1" />
+                <div class="blog-title">
+                    <h3><%= post.title %></h3>
+                    <a href="posts/<%= post.slug %>">
+                        <button class="btn btn-blog">Read</button>
+                    </a>
+                    <span><%= post.readTime %> minute</span>
+                </div>
+            </div>
+        <% }) %> -->
+
+        <!-- <section>
+            <div class="blog">
+                <div class="container">
+                    <div class="owl-carousel owl-theme blog-post">
+                        <% popularPosts.forEach(post=> { %>
+                            <div class="blog-content" data-aos="fade-up" data-aos-delay="200">
+                                <img src="<%= post.image %>" alt="post-1" />
+                                <div class="blog-title">
+                                    <h3><%= post.title %></h3>
+                                    <a href="posts/<%= post.slug %>">
+                                        <button class="btn btn-blog">Read</button>
+                                    </a>
+                                    <span><%= post.readTime %> minute</span>
+                                </div>
+                            </div>
+                        <% }) %>
+                    </div>
+                    <div class="owl-navigation">
+                        <span class="owl-nav-prev"><i class="fas fa-long-arrow-alt-left"></i></span>
+                        <span class="owl-nav-next"><i class="fas fa-long-arrow-alt-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- ----------x---------- Blog Carousel --------x-------- -->
+
+        <!-- ---------------------- Site Content -------------------------->
+
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <% recentPosts.forEach(post=> { %>
+                        <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="post-image">
+                                <div>
+                                    <img src="<%= post.image %>" class="img" alt="blog1" />
+                                </div>
+                                <div class="post-info flex-row">
+                                    <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;<%= post.author %></span>
+                                    <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;11th May 2020</span>
+                                    <span>
+                                        <%= post.readTime %> Min Read
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="post-title">
+                                <a href="#">
+                                    <%= post.title %>
+                                </a>
+                                <p>
+                                    <%= post.body %>
+                                </p>
+                                <a href="/posts/<%= post.slug %>">
+                                    <button class="btn post-btn">
+                                        Read More &nbsp; <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                        <hr />
+                        <% }) %>
+
+                            <!-- <div class="pagination flex-row">
+                                <a href="#"><i class="fas fa-chevron-left"></i></a>
+                                <a href="#" class="pages">1</a>
+                                <a href="#" class="pages">2</a>
+                                <a href="#" class="pages">3</a>
+                                <a href="#"><i class="fas fa-chevron-right"></i></a>
+                            </div> -->
+                </div>
+                <aside class="sidebar">
+                    <div class="category">
+                        <h2 data-aos="flip-up" data-aos-delay="150">Category</h2>
+                        <ul class="category-list">
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="100">
+                                <a href="#">IPL</a>
+                                <span>(05)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="200">
+                                <a href="#">Techniques</a>
+                                <span>(02)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="300">
+                                <a href="#">Cricketers</a>
+                                <span>(07)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="400">
+                                <a href="#">GOAT Matches</a>
+                                <span>(01)</span>
+                            </li>
+                            <li class="list-items" data-aos="fade-left" data-aos-delay="500">
+                                <a href="#">Auctions</a>
+                                <span>(08)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="popular-post">
+                        <h2 data-aos="flip-up" data-aos-delay="150">Popular Post</h2>
+                        <% popularPosts.forEach(post=> { %>
+                            <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                                <div class="post-image">
+                                    <div>
+                                        <img src="<%= post.image %>" class="img" alt="blog1" />
+                                    </div>
+                                    <div class="post-info flex-row">
+                                        <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                            2019</span>
+                                        <span>
+                                            <%= post.likes %> Likes
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="post-title">
+                                    <a href="posts/<%= post.slug %>">
+                                        <%= post.title %>
+                                    </a>
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                    <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                        <h2>Newsletter</h2>
+                        <div class="form-element">
+                            <input type="text" class="input-element" placeholder="Email" />
+                            <button class="btn form-btn">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="popular-tags">
+                        <h2>Popular Tags</h2>
+                        <div class="tags flex-row">
+                            <span class="tag" data-aos="flip-up" data-aos-delay="100">Software</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="200">technology</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="300">travel</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="400">illustration</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="500">design</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="600">lifestyle</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="700">love</span>
+                            <span class="tag" data-aos="flip-up" data-aos-delay="800">project</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- -----------x---------- Site Content -------------x------------>
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+
+    <%- include('partials/footer') %>

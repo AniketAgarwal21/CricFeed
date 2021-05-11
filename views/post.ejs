@@ -1,0 +1,67 @@
+<%- include('partials/header') %>
+    <main>
+        <section class="container">
+            <div class="site-content">
+                <div class="posts">
+                    <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="post-image">
+                            <div>
+                                <img src="<%= post.image %>" class="img" alt="blog1" />
+                            </div>
+                            <div class="post-info flex-row">
+                                <span><i class="fas fa-user text-gray"></i>&nbsp;&nbsp;<%= post.author %></span>
+                                <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;11th May 2020</span>
+                                <span>
+                                    <%= post.readTime %> Min Read
+                                </span>
+                            </div>
+                        </div>
+                        <div class="post-title">
+                            <a href="#">
+                                <%= post.title %>
+                            </a>
+                            <p>
+                                <%= post.body %>
+                            </p>
+                        </div>
+                        <!-- <div>
+                            <span><%= post.likes %></span>
+                            <i class="far fa-heart like-post-btn"></i>
+                        </div> -->
+                    </div>
+                </div>
+                <aside class="sidebar">
+                    <div class="popular-post">
+                        <h2 data-aos="flip-up" data-aos-delay="150">Popular Post</h2>
+                        <div class="popular-post">
+                            <% popularPosts.forEach(post=> { %>
+                                <div class="post-content" data-aos="flip-up" data-aos-delay="200">
+                                    <div class="post-image">
+                                        <div>
+                                            <img src="<%= post.image %>" class="img" alt="blog1" />
+                                        </div>
+                                        <div class="post-info flex-row">
+                                            <span><i class="fas fa-calendar-alt text-gray"></i>&nbsp;&nbsp;January 14,
+                                                2019</span>
+                                            <span>
+                                                <%= post.likes %> Likes
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="post-title">
+                                        <a href="/posts/<%= post.slug %>">
+                                            <%= post.title %>
+                                        </a>
+                                    </div>
+                                </div>
+                            <% }) %>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+
+
+    <%- include('partials/footer') %>
