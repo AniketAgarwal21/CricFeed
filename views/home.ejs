@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 
     <!----------------------------- Main Site Section ------------------------------>
-    <main>
+    <main id="main">
         <!------------------------ Site Title ---------------------->
 
         <section class="site-title">
@@ -60,7 +60,7 @@
 
         <section class="container">
             <div class="site-content">
-                <div class="posts">
+                <div class="posts" id="latest-posts">
                     <% recentPosts.forEach(post=> { %>
                         <div class="post-content" data-aos="zoom-in" data-aos-delay="200">
                             <div class="post-image">
@@ -80,7 +80,7 @@
                                     <%= post.title %>
                                 </a>
                                 <p>
-                                    <%= post.body %>
+                                    <%= post.body.slice(0, 200) %> . . . . 
                                 </p>
                                 <a href="/posts/<%= post.slug %>">
                                     <button class="btn post-btn">
@@ -101,7 +101,7 @@
                             </div> -->
                 </div>
                 <aside class="sidebar">
-                    <div class="category">
+                    <!-- <div class="category">
                         <h2 data-aos="flip-up" data-aos-delay="150">Category</h2>
                         <ul class="category-list">
                             <li class="list-items" data-aos="fade-left" data-aos-delay="100">
@@ -125,8 +125,8 @@
                                 <span>(08)</span>
                             </li>
                         </ul>
-                    </div>
-                    <div class="popular-post">
+                    </div> -->
+                    <div class="popular-post" id="popular-posts">
                         <h2 data-aos="flip-up" data-aos-delay="150">Popular Post</h2>
                         <% popularPosts.forEach(post=> { %>
                             <div class="post-content" data-aos="flip-up" data-aos-delay="200">
@@ -150,7 +150,7 @@
                             </div>
                             <% }) %>
                     </div>
-                    <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
+                    <!-- <div class="newsletter" data-aos="fade-up" data-aos-delay="300">
                         <h2>Newsletter</h2>
                         <div class="form-element">
                             <input type="text" class="input-element" placeholder="Email" />
@@ -169,7 +169,7 @@
                             <span class="tag" data-aos="flip-up" data-aos-delay="700">love</span>
                             <span class="tag" data-aos="flip-up" data-aos-delay="800">project</span>
                         </div>
-                    </div>
+                    </div> -->
                 </aside>
             </div>
         </section>

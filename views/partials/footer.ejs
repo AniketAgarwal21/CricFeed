@@ -1,70 +1,72 @@
+<!-- --------------------------- Footer ---------------------------------------- -->
 
-
-    <!-- --------------------------- Footer ---------------------------------------- -->
-
-    <footer class="footer">
-        <div class="container">
-            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
-                <h2>About us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quia atque nemo ad modi officiis
-                    iure, autem nulla tenetur repellendus.</p>
+<footer class="footer" id="footer">
+    <div class="container">
+        <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+            <h2>About us</h2>
+            <p>The best place for Cricket related blogs - News, Facts, Matches, Stories, Did You Knows and many more!
+                Check us out!</p>
+        </div>
+        <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+            <h2>Newsletter</h2>
+            <p>Stay update with our latest</p>
+            <div class="form-element">
+                <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
             </div>
-            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
-                <h2>Newsletter</h2>
-                <p>Stay update with our latest</p>
-                <div class="form-element">
-                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
-                </div>
-            </div>
-            <div class="instagram" data-aos="fade-left" data-aos-delay="200">
-                <h2>Instagram</h2>
-                <div class="flex-row">
+        </div>
+        <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+            <h2>Instagram</h2>
+            <!-- <div class="flex-row">
                     <img src="./assets/instagram/thumb-card3.png" alt="insta1">
                     <img src="./assets/instagram/thumb-card4.png" alt="insta2">
                     <img src="./assets/instagram/thumb-card5.png" alt="insta3">
-                </div>
-                <div class="flex-row">
-                    <img src="./assets/instagram/thumb-card6.png" alt="insta4">
-                    <img src="./assets/instagram/thumb-card7.png" alt="insta5">
-                    <img src="./assets/instagram/thumb-card8.png" alt="insta6">
-                </div>
-            </div>
-            <div class="follow" data-aos="fade-left" data-aos-delay="200">
-                <h2>Follow us</h2>
-                <p>Let us be Social</p>
-                <div>
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube"></i>
-                </div>
+                </div> -->
+            <div class="flex-row">
+                <% for(i=1; i<=2; i++){ %>
+                    <div class="flex-row">
+                        <% for(j=0; j<=2; j++){ %>
+                            <img src="<%= popularPosts[0].image %>">
+                            <% } %>
+                    </div>
+                    <% } %>
             </div>
         </div>
-        <div class="rights flex-row">
-            <h4 class="text-gray">
-                Copyright ©2021 All rights reserved | made with ❤ by
-                <a href="/" target="_black">Aniket Agarwal</a>
-            </h4>
+        <div class="follow" data-aos="fade-left" data-aos-delay="200">
+            <h2>Follow us</h2>
+            <p>Let us be Social</p>
+            <div class="social text-gray">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
         </div>
-        <div class="move-up">
-            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
-        </div>
-    </footer>
+    </div>
+    <div class="rights flex-row">
+        <h4 class="text-gray">
+            Copyright ©2021 All rights reserved | made with ❤ by
+            <a href="/" target="_black">Aniket Agarwal</a>
+        </h4>
+    </div>
+    <div class="move-up">
+        <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+    </div>
+</footer>
 
-    <!-- -------------x------------- Footer --------------------x------------------- -->
+<!-- -------------x------------- Footer --------------------x------------------- -->
 
-    <!-- Jquery Library file -->
-    <script src="/js/Jquery3.4.1.min.js"></script>
+<!-- Jquery Library file -->
+<script src="/js/Jquery3.4.1.min.js"></script>
 
-    <!-- --------- Owl-Carousel js ------------------->
-    <script src="/js/owl.carousel.min.js"></script>
+<!-- --------- Owl-Carousel js ------------------->
+<script src="/js/owl.carousel.min.js"></script>
 
-    <!-- ------------ AOS js Library  ------------------------- -->
-    <script src="/js/aos.js"></script>
+<!-- ------------ AOS js Library  ------------------------- -->
+<script src="/js/aos.js"></script>
 
-    <!-- Custom Javascript files -->
-    <script src="/js/main.js"></script>
-    <script src="/js/script.js"></script>
-    </body>
+<!-- Custom Javascript files -->
+<script src="/js/main.js"></script>
+<script src="/js/script.js"></script>
+</body>
 
-    </html>
+</html>
