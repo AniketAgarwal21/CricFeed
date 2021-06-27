@@ -42,8 +42,12 @@ const posts = () => {
             return res.render('createPost')
         },
         addPost(req, res) {
-            const { title, body, author, image } = req.body
-            console.log(req.body);
+            const { key, title, body, author, image } = req.body
+            // console.log(req.body);
+
+            if (key !== process.env.CREATE_POST_ID) {
+                return res.render('createPost', { error: "Something Went Wrong" })
+            }
 
             const readTime = Math.ceil(body.split(" ").length / 200)
 
@@ -56,8 +60,8 @@ const posts = () => {
             })
 
             post.save().then(() => {
-                res.json({ success: "yesh" })
-            })
+                res.render('createPost', { success: "Post Added" })
+            }).catch((error) => res.render('createPost', { error }))
         },
         // async likePost(req, res) {
         //     const { slug } = req.body

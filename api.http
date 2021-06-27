@@ -2,6 +2,7 @@ POST http://localhost:3000/add-post
 Content-Type: application/json
 
 {
+    "key": "",
     "title": "",
     "body": "",
     "author": "",
